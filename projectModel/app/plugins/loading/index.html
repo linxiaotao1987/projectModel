@@ -1,0 +1,40 @@
+<!doctype html><html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<title></title>
+<link rel="stylesheet" href="css/public.css">
+</head>
+
+<body>
+<div class="js-popupbox popupbox" id="js-sendResume-popup">
+    <div class="contentbox">
+        <div class="main"><img src="img/close.png" class="close">
+
+            <h1 class="title">岗位信息</h1>
+
+            <p class="name">ui设计师</p>
+
+            <p class="secondtitle">全职 ｜00k~00k</p>
+
+            <div class="contentbox js-contentbox"><input type="text" data-name="姓名" data-regexp="" class="input"
+                                                         placeholder="请输入姓名"><input type="number" data-name="手机号码"
+                                                                                    data-regexp="" class="input"
+                                                                                    placeholder="请输入手机号码"><input
+                    type="number" data-name="工作年限" data-regexp="" class="input" placeholder="请输入工作年限"><a href="#"
+                                                                                                         class="submit js-submit">马上申请</a>
+            </div>
+        </div>
+</div>
+</div>
+<script src="javascripts/ajaxloadbox.js"></script>
+<script>
+    document.querySelector('.js-submit').addEventListener('click',function(){
+        var loadbox = new ajaxLoadBox();
+        setTimeout(function(){
+            loadbox.hide('请求成功')
+        },2000)
+    })
+</script>
+
+</body>
+</html>

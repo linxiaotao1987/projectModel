@@ -1,0 +1,108 @@
+@import "../../../../style/extend";
+
+/*提交后的loading*/
+.Lin-popupStatusBox {
+  display: none;
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: 19;
+  &>.contbox {
+    position: fixed;
+    padding:r(30);
+    left:50%;
+    top:50%;
+    -webkit-transform:translate(-50%,-50%);
+    background: rgba(0,0,0,.6);
+    border-radius:r(8);
+    z-index: 19;
+    &>.loadBox {
+      position: relative;
+      width:r(100);
+      height:r(100);
+      -webkit-animation: rotate 2s linear infinite;
+      &>div {
+        position: absolute;
+        left:-webkit-calc(50% + 0.2rem);
+        top:-webkit-calc(50% - 1px);
+        width:r(10);
+        height:r(2);
+        background: #cccccc;
+        -webkit-transform-origin: r(-16) 50%;
+        &:nth-child(1) {
+          -webkit-transform:rotate(0deg);
+        }
+        &:nth-child(2) {
+          -webkit-transform:rotate(30deg);
+        }
+        &:nth-child(3) {
+          -webkit-transform:rotate(60deg);
+        }
+        &:nth-child(4) {
+          -webkit-transform:rotate(90deg);
+        }
+        &:nth-child(5) {
+          -webkit-transform:rotate(120deg);
+        }
+        &:nth-child(6) {
+          -webkit-transform:rotate(150deg);
+        }
+        &:nth-child(7) {
+          -webkit-transform:rotate(180deg);
+        }
+        &:nth-child(8) {
+          -webkit-transform:rotate(210deg);
+        }
+        &:nth-child(9) {
+          -webkit-transform:rotate(240deg);
+        }
+        &:nth-child(10) {
+          -webkit-transform:rotate(270deg);
+        }
+        &:nth-child(11) {
+          -webkit-transform:rotate(300deg);
+        }
+        &:nth-child(12) {
+          -webkit-transform:rotate(330deg);
+        }
+      }
+    }
+    &>.tips {
+      display: none;
+      color:#ffffff;
+      font-size:r(28);
+    }
+  }
+  &.hide {
+    -webkit-animation: hide linear .5s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-fill-mode:forwards;
+    .loadBox {
+      display: none;
+    }
+    .tips {
+      display: block;
+    }
+  }
+
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform:rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform:rotateZ(360deg);
+  }
+}
+@-webkit-keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*end*/

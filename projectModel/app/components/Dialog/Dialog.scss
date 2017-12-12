@@ -1,0 +1,82 @@
+@import "../../style/extend";
+
+.u-dialog-box {
+  @extend %boxcenter;
+  //display: none;
+  position: fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background:rgba(0,0,0,.63);
+  z-index: 19;
+  &>.cont-box {
+    padding-top:r(38);
+    width:r(480);
+    background:#fff;
+    overflow: hidden;
+    &>.icon {
+      display: block;
+      margin:0 auto;
+      width:r(314);
+      height:r(243);
+    }
+    &>.tips {
+      padding: 0 r(20) r(20) r(20);
+      color:$fontcolorLv0;
+      line-height: 1.6;
+      text-align: center;
+    }
+    &>.button-box {
+      display: -webkit-box;
+    }
+    .button-main {
+      display: block;
+      height:r(85);
+      line-height: r(85);
+      background:$maincolor;
+      text-align: center;
+      color: #fff7e6;
+      -webkit-box-flex: 1;
+    }
+  }
+}
+
+@include borderRadius('.u-dialog-box > .cont-box',8);
+@include fontSize('.u-dialog-box > .cont-box > .tips',30);
+@include fontSize('.u-dialog-box > .cont-box .button-main',30);
+
+.share-dialog {
+  @extend %boxcenter;
+  display: none;
+  position: fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  background:rgba(0,0,0,.63);
+  z-index: 19;
+  &>.photo {
+    display: block;
+    margin-top:r(-80);
+    width:r(527);
+  }
+}
+.share-tips {
+  //display: none;
+  position: fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  background:rgba(0,0,0,.63);
+  z-index: 19;
+  &>.photo {
+    position: absolute;
+    right:r(60);
+    display: block;
+    width:r(292);
+  }
+}
+
+

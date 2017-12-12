@@ -1,0 +1,94 @@
+@import '../style/extend';
+@import '../style/color';
+
+
+.u-button-main,.u-button-red {
+  display: block;
+  height:r(92);
+  line-height: r(92);
+
+  color:#fff;
+  text-align: center;
+  &.disable {
+    background:$fontcolorLv4;
+  }
+}
+.u-button-main {
+  background:$maincolor;
+  &:active,&:link,&:hover {
+    color:#fff;
+  }
+}
+.u-button-red {
+  background:#e27460;
+  &:active,&:link,&:hover {
+    color:#fff;
+  }
+}
+
+@include fontSize(".u-button-main",38)
+@include borderRadius(".u-button-main",8)
+@include fontSize(".u-button-red",38)
+@include borderRadius(".u-button-red",8)
+
+.u-list-enter {
+  @extend %box-middle;
+  min-height:r(100);
+  &:not(:last-child) {
+    border-bottom:1px solid $bordercolor;
+  }
+  &>.icon {
+    display: block;
+    width:r(64);
+    height:r(64);
+  }
+  &>.name {
+    display: block;
+    padding-left:r(10);
+    min-width:5em;
+    line-height: 1;
+  }
+  &>.input {
+    display: block;
+    -webkit-box-flex:1;
+    color:$fontcolorLv0;
+  }
+  &>.identify {
+    padding:0 r(20);
+    height:r(50);
+    background: $maincolor;
+    color:#fff;
+    border-radius:r(50);
+    line-height: r(50);
+    box-sizing: border-box;
+    &.sending {
+      background:$fontcolorLv4;
+    }
+  }
+}
+
+@include fontSize(".u-list-enter > .name",30)
+@include fontSize(".u-list-enter > .input",30)
+@include fontSize(".u-list-enter > .identify",26)
+
+
+.rule-box {
+  padding:0 r(30);
+  min-height:100vh;
+  background:#fff;
+  color:$fontcolorLv0;
+  &>.title {
+    padding:r(30);
+    text-align: center;
+    font-weight: bold;
+  }
+  &>.cont {
+    text-indent:2em;
+    line-height: 1.6;
+    text-align: justify;
+  }
+}
+
+
+@include fontSize(".rule-box  > .title", 36);
+@include fontSize(".rule-box  > .cont", 26);

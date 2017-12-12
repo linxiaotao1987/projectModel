@@ -1,0 +1,101 @@
+
+@import "./extend";;
+
+/*提交后的loading*/
+.Lin-popupStatusBox {
+  display: none;
+  position: fixed;
+  padding:r(15);
+  left:50%;
+  top:50%;
+  -webkit-transform:translate(-50%,-50%);
+  background: rgba(0,0,0,.6);
+  border-radius:r(4);
+  z-index: 39;
+  &.hide {
+    -webkit-animation: hide linear .5s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-fill-mode:forwards;
+    &>.loadBox {
+      display: none;
+    }
+    &>.tips {
+      display: block;
+    }
+  }
+  &>.loadBox {
+    position: relative;
+    width:r(200);
+    height:r(200);
+    -webkit-animation: rotate 2s linear infinite;
+    &>div {
+      position: absolute;
+      left:50%;
+      top:50%;
+      margin:r(-1) 0 0 r(20);
+      width:r(20);
+      height:r(2);
+      background: #cccccc;
+      -webkit-transform-origin: r(-20) 50%;
+      &:nth-child(1) {
+        -webkit-transform:rotate(0deg);
+      }
+      &:nth-child(2) {
+        -webkit-transform:rotate(30deg);
+      }
+      &:nth-child(3) {
+        -webkit-transform:rotate(60deg);
+      }
+      &:nth-child(4) {
+        -webkit-transform:rotate(90deg);
+      }
+      &:nth-child(5) {
+        -webkit-transform:rotate(120deg);
+      }
+      &:nth-child(6) {
+        -webkit-transform:rotate(150deg);
+      }
+      &:nth-child(7) {
+        -webkit-transform:rotate(180deg);
+      }
+      &:nth-child(8) {
+        -webkit-transform:rotate(210deg);
+      }
+      &:nth-child(9) {
+        -webkit-transform:rotate(240deg);
+      }
+      &:nth-child(10) {
+        -webkit-transform:rotate(270deg);
+      }
+      &:nth-child(11) {
+        -webkit-transform:rotate(300deg);
+      }
+      &:nth-child(12) {
+        -webkit-transform:rotate(330deg);
+      }
+    }
+  }
+  &>.tips {
+    display: none;
+    color:#ffffff;
+  }
+}
+@include fontSize('.Lin-popupStatusBox > .tips ',28);
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform:rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform:rotateZ(360deg);
+  }
+}
+@-webkit-keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*end*/

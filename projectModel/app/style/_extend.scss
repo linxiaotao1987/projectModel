@@ -1,0 +1,97 @@
+@charset "utf-8";
+@import "color";
+
+%dialog {
+  @extend %boxcenter;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  z-index: 19;
+}
+%boxcenter {
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+}
+
+%box-vertical {
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+}
+
+%box-middle {
+   display: -webkit-box;
+   -webkit-box-align: center;
+ }
+
+%border-bottom-dashed {
+  left:0px;
+  bottom:0px;
+  right:-100%;
+  height:2px;
+  border-bottom:1px dashed $bordercolor;
+}
+
+%font-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+}
+
+%middle {
+  position: absolute;
+  top:50%;
+  -webkit-transform: translate(0,-50%);
+}
+
+%fixedFull {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index: 29;
+}
+
+
+@function r($num) {
+  @return ($num / 75) * 1rem;
+}
+
+@mixin fontSize($class,$fontsize) {
+  $size: $fontsize / 2;
+
+  #{$class} {
+    font-size: $size * 1px; // 默认写上dpr为1的fontSize
+  }
+
+  [data-dpr="2"] #{$class} {
+    font-size: $size * 2px;
+  }
+
+  [data-dpr="3"] #{$class} {
+    font-size: $size * 3px;
+  }
+}
+
+@mixin borderRadius($class,$borderRadius) {
+  $size: $borderRadius / 2;
+
+  #{$class} {
+    border-radius: $size * 1px; // 默认写上dpr为1的fontSize
+  }
+
+  [data-dpr="2"] #{$class} {
+    border-radius: $size * 2px;
+  }
+
+  [data-dpr="3"] #{$class} {
+    border-radius: $size * 3px;
+  }
+}
+
+
+

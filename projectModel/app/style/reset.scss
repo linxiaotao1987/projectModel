@@ -1,0 +1,31 @@
+html, body {
+  position: relative;
+  font: 0 "微软雅黑", helvetica, arial;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+
+a, a:active, a:hover, a:visited {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  color:inherit;
+}
+a,input {
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+input {
+  margin:0;
+  border: none;
+  background: none;
+}
+input::-webkit-input-placeholder {
+  color:#c9c7c7;
+}
+*{
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}

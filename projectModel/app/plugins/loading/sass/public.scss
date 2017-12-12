@@ -1,0 +1,106 @@
+@import 'assembly/ajaxLoadbox';
+/*弹窗*/
+/* line 381, ../sass/public.scss */
+.popupbox {
+  z-index: 19; }
+/* line 385, ../sass/public.scss */
+.popupbox > .contentbox {
+  width: 6.12rem;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden; }
+/* line 390, ../sass/public.scss */
+.popupbox > .contentbox > .main {
+  position: relative;
+  padding: 10px 15px;
+  text-align: center;
+  color: #000; }
+/* line 396, ../sass/public.scss */
+.popupbox > .contentbox .close {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 1rem;
+  height: 1rem; }
+/* line 403, ../sass/public.scss */
+.popupbox > .contentbox .title {
+  padding-top: 20px;
+  font-size: 20px; }
+/* line 407, ../sass/public.scss */
+.popupbox > .contentbox .name, .popupbox > .contentbox .secondtitle {
+  padding-top: 10px;
+  font-size: 16px; }
+/* line 411, ../sass/public.scss */
+.popupbox > .contentbox .secondtitle {
+  margin-bottom: 15px; }
+/* line 414, ../sass/public.scss */
+.popupbox > .contentbox .content {
+  margin-bottom: 1em;
+  padding-left: 1em;
+  text-align: justify;
+  text-indent: -1em;
+  font-size: 13px;
+  line-height: 20px; }
+/* line 422, ../sass/public.scss */
+.popupbox > .contentbox .contentbox {
+  overflow-y: auto;
+  box-sizing: border-box; }
+/* line 427, ../sass/public.scss */
+.popupbox > .contentbox .mask {
+  padding-bottom: .8rem;
+  -webkit-mask: -webkit-linear-gradient(top, black 70%, transparent 90%); }
+/* line 431, ../sass/public.scss */
+.popupbox > .contentbox > .foot {
+  display: block; }
+/* line 434, ../sass/public.scss */
+.popupbox > .contentbox .img {
+  width: 100%; }
+/* line 437, ../sass/public.scss */
+.popupbox > .contentbox .input {
+  margin-top: 15px;
+  padding: 0px 10px;
+  width: 100%;
+  height: .6rem;
+  border: none;
+  font-size: 14px;
+  box-sizing: border-box;
+  background: #f0eff5; }
+/* line 446, ../sass/public.scss */
+.popupbox > .contentbox .input.warn {
+  border: 1px solid #ffa700;
+  background: #f0eff5 url('../img/hehda.jpg.png?1474426060') right 10px center no-repeat;
+  background-size: 20px 20px; }
+/* line 452, ../sass/public.scss */
+.popupbox > .contentbox .submit {
+  display: block;
+  margin-top: 15px;
+  width: 100%;
+  height: .6rem;
+  background: #ffa700;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  line-height: .6rem;
+  border-radius: 4px; }
+/* line 463, ../sass/public.scss */
+.popupbox > .contentbox .submit:active {
+  background: #ff6600; }
+/* line 49, ../sass/assembly/_extend.scss */
+.loadbox, .page-second > .personbox-out, .page-third > .personbox-out, .popupbox {
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center; }
+
+
+/* line 79, ../sass/assembly/_extend.scss */
+.loadbox, .popupbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); }
+/*end*/
+html{
+  font-size:50px;
+}

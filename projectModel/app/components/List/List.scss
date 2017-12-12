@@ -1,0 +1,201 @@
+@import "../../style/extend";
+
+$orange:#f1b15f;
+
+.u-list-box {
+  padding:0 0 0 r(30);
+  border-bottom:1px solid $bordercolor;
+  background:#fff;
+}
+
+.u-list {
+  @extend %box-middle;
+  padding:r(30) 0;
+  &:not(:last-child){
+    border-bottom:1px solid $bordercolor;
+  }
+  &>.icon {
+    display: block;
+    margin:0 r(10) 0 0;
+    width:r(40);
+    height:r(40);
+  }
+  &>.arrow {
+    display: block;
+    margin:0 r(20) 0 0;
+    width:r(15);
+  }
+  &>.title {
+    display: block;
+    -webkit-box-flex: 1;
+    color:$fontcolorLv0;
+  }
+}
+
+@include fontSize('.u-list > .title',30);
+
+.u-show-info-list {
+  @extend %box-middle;
+  padding:r(20) 0;
+  &:not(:last-child) {
+    border-bottom:1px solid $bordercolor;
+  }
+  &>.icon {
+    display: block;
+    width:r(100);
+    height:r(100);
+    border-radius:50%;
+  }
+  &>.title-box {
+    padding:0 r(100) 0 r(20);
+    -webkit-box-flex: 1;
+    &>.title {
+      color:$fontcolorLv0;
+      line-height: 1.2;
+    }
+    &>.tips {
+      padding:r(20) 0 0 0;
+      color:$fontcolorLv3;
+      line-height: 1;
+    }
+  }
+  &>.state-box {
+    padding:0 r(30) 0 0;
+    text-align: right;
+    &.waiting {
+      &>.state-icon {
+        border:1px solid #74ba74;
+        color:#74ba74;
+      }
+    }
+    &>.cont {
+      color:$warn;
+      line-height: 1;
+    }
+    &>.state-icon {
+      display: inline-block;
+      padding:r(5) r(10);
+      margin:r(20) 0 0 0;
+      border:1px solid #979797;
+      color:#979797;
+      line-height: 1;
+    }
+  }
+}
+
+@include fontSize('.u-show-info-list > .title-box',22);
+@include fontSize('.u-show-info-list > .state-box > .cont',30);
+@include borderRadius('.u-show-info-list > .state-box > .state-icon',8);
+
+
+
+.u-list-earnings {
+  @extend %box-middle;
+  padding:r(25) r(30) r(20) 0;
+  &:not(:last-child) {
+    border-bottom:1px solid $bordercolor;
+  }
+  &>.info-box {
+    -webkit-box-flex: 1;
+    &>.title {
+      color:$fontcolorLv0;
+    }
+    &>.tips {
+      color:$fontcolorLv3;
+    }
+    &>.amount {
+      color:$warn;
+    }
+  }
+  &>.right-box {
+    text-align: right;
+  }
+  &>.left-box {
+    text-align: left;
+  }
+  &>.arrow {
+    display: block;
+    margin-left:r(20);
+    width:r(15);
+    height:r(27);
+  }
+}
+@include fontSize(".u-list-earnings  > .info-box .title", 30);
+@include fontSize(".u-list-earnings  > .info-box .amount", 30);
+@include fontSize(".u-list-earnings  > .info-box > .tips", 22);
+
+
+.SyllabusList {
+  display: -webkit-box;
+  position: relative;
+  padding:r(15) r(20) r(15) r(15);
+  margin-bottom:r(20);
+  background:#fff;
+  overflow: hidden;
+  line-height: 1;
+  box-shadow:0 0 r(8) rgba(0,0,0,.1);
+  &>.tag {
+    position: absolute;
+    left:0;
+    top:0;
+    padding:r(7) r(10);
+    min-width:3em;
+    color:#fff;
+    text-align: center;
+    &.outline {
+      background:$orange;
+    }
+  }
+  .orange {
+    color:$warn;
+  }
+  .green {
+    color:$maincolor;
+  }
+  &>.cover-box {
+    @extend %box-middle;
+    &>.cover {
+      display: block;
+      margin-right:r(30);
+      width:r(160);
+      height:r(160);
+    }
+  }
+
+  &>.font-box {
+    padding-right:1em;
+    -webkit-box-flex: 1;
+    &>.title {
+      padding:r(10) 0 r(25) 0;
+      color:$fontcolorLv0;
+    }
+    &>.tips {
+      padding-bottom:r(15);
+      color:$fontcolorLv3;
+    }
+  }
+  &>.button-box {
+    @extend %box-middle;
+    &>.button-box-inner {
+      @extend %box-middle;
+      padding:0 r(20) 0 r(10);
+      height:r(56);
+      border-radius:r(28);
+      background:$maincolor;
+      color:#fff;
+    }
+    .icon {
+      display: block;
+      margin-right:r(5);
+      width:r(36);
+      height:r(36);
+      border-radius:50%;
+    }
+  }
+}
+
+@include borderRadius(".SyllabusList", 10);
+@include borderRadius(".SyllabusList > .cover-box > .cover", 10);
+@include fontSize(".SyllabusList > .tag", 24);
+@include fontSize(".SyllabusList > .font-box > .title", 32);
+@include fontSize(".SyllabusList > .button-box", 26);
